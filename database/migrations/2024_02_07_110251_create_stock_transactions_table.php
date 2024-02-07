@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('stock_transactions', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->uuid('order_id');
+            $table->char('id')->primary();
+            $table->char('order_id');
             $table->string('transaction_type')->default('cash');
             $table->integer('reference_number');
             $table->json('notes')->nullable();

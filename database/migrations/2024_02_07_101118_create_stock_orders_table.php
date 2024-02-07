@@ -13,8 +13,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('stock_orders', function (Blueprint $table) {
-            $table->uuid('id');
-            $table->uuid('supplier_id');
+            $table->char('id')->primary();
+            $table->char('supplier_id');
             $table->dateTime('order_date')->default(Carbon::now());
             $table->dateTime('expected_delivery_date');
             $table->string('order_status')->default('unsettled');
