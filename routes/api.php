@@ -31,13 +31,16 @@ Route::group(['prefix'=>'categories'], function() {
     Route::get('/', [ItemCategoryController::class, 'showCategories'])->name('category.show');
     Route::post('/create', [ItemCategoryController::class, 'store'])->name('category.create');
     Route::get('/edit/{id}', [ItemCategoryController::class, 'editCategory'])->name('category.edit');
-    Route::post('/update/{id}', [ItemCategoryController::class, 'updateCategory'])->name('category.update');
-    Route::get('/delete/{id}', [ItemCategoryController::class, 'deleteCategory'])->name('category.delete');
+    Route::put('/update/{id}', [ItemCategoryController::class, 'updateCategory'])->name('category.update');
+    Route::delete('/delete/{id}', [ItemCategoryController::class, 'deleteCategory'])->name('category.delete');
     Route::get('/search/{search}', [ItemCategoryController::class, 'searchCategory'])->name('category.search');
 });
 
-Route::group(['prefix' => 'suppliers'], function(){
+Route::group(['prefix' => 'suppliers'], function() {
     Route::get('/', [SupplierController::class, 'showSuppliers'])->name('suppliers.show');
-    Route::post('/add', [SupplierController::class, 'addSupplier'])->name('suppliers.addnew');
-
+    Route::post('/create', [SupplierController::class, 'addSupplier'])->name('suppliers.addnew');
+    Route::get('/edit/{id}', [SupplierController::class, 'ViewSupplier'])->name('suppliers.viewSupplier');
+    Route::put('/update/{id}', [SupplierController::class, 'update'])->name('suppliers.update');
+    Route::delete('/delete/{id}', [SupplierController::class, 'deleteSupplier'])->name('supplier.delete');
+    Route::get('/search/{search}', [SupplierController::class, 'searchSupplier'])->name('supplier.search');
 });

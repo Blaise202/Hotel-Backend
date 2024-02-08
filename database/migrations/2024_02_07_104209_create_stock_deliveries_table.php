@@ -13,8 +13,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('stock_deliveries', function (Blueprint $table) {
-            $table->char('id')->primary();
-            $table->char('order_id');
+            $table->uuid('id')->primary();
+            $table->uuid('order_id');
             $table->dateTime('delivery_date')->default(Carbon::now());
             $table->string('received_by')->nullable();
             $table->string('delivery_status')->default('ongoing');
@@ -22,7 +22,7 @@ return new class extends Migration
             $table->integer('tracking_number')->default(rand(100000,900000000))->unique();
             $table->timestamps();
 
-            $table->foreign('order_id')->references('stock_orders')->on('id')->onDelete('cascade');
+            $table->foreign('order_id')->references('id')->on('stock_orders')->onDelete('cascade');
         });
     }
 

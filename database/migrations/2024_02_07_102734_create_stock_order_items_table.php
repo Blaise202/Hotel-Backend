@@ -12,17 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('stock_order_items', function (Blueprint $table) {
-            $table->char('id')->primary();
-            $table->char('order_id');
-            $table->char('item_id');
+            $table->uuid('id')->primary();
+            $table->uuid('order_id');
+            $table->uuid('item_id');
             $table->integer('quantity');
             $table->double('unit_price');
             $table->double('total_price');
             $table->timestamps();
 
 
-            $table->foreign('order_id')->references('stock_orders')->on('id')->onDelete('cascade');
-            $table->foreign('item_id')->references('stock_items')->on('id')->onDelete('cascade');
+            $table->foreign('order_id')->references('id')->on('stock_orders')->onDelete('cascade');
+            $table->foreign('item_id')->references('id')->on('stock_items')->onDelete('cascade');
         });
     }
 

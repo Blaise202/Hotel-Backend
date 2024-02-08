@@ -13,8 +13,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('stock_orders', function (Blueprint $table) {
-            $table->char('id')->primary();
-            $table->char('supplier_id');
+            $table->uuid('id')->primary();
+            $table->uuid('supplier_id');
             $table->dateTime('order_date')->default(Carbon::now());
             $table->dateTime('expected_delivery_date');
             $table->string('order_status')->default('unsettled');
@@ -23,7 +23,7 @@ return new class extends Migration
             $table->json('payment_terms')->nullable();
             $table->timestamps();
 
-            $table->foreign('supplier_id')->references('stock_suppliers')->on('id')->ondelete('cascade');
+            $table->foreign('supplier_id')->references('id')->on('stock_suppliers')->ondelete('cascade');
         });
     }
 

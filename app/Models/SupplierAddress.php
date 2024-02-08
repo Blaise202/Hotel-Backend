@@ -6,15 +6,14 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class StockTransaction extends Model
+class SupplierAddress extends Model
 {
     use HasFactory, HasUuids;
 
-    public function StockItem(){
-        return $this->hasMany(StockItem::class);
+    protected $fillable= ['stock_supplier_id','city','state','zipcode','country','address'];
+
+    public function supplier(){
+        return $this->belongsTo(StockSupplier::class);
     }
 
-    public function StockDelivery(){
-        return $this->hasone(StockDelivery::class);
-    }
 }

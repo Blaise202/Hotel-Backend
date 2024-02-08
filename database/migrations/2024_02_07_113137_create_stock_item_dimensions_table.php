@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('stock_item_dimensions', function (Blueprint $table) {
-            $table->char('id')->primary()->default(\Illuminate\Support\Facades\DB::raw('uuid_generate_v4()'));
-            $table->char('item_id');
+            $table->uuid('id')->primary();
+            $table->uuid('item_id');
             $table->string('furniture')->nullable();
             $table->string('length')->nullable();
             $table->string('width')->nullable();
@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('volume')->nullable();
             $table->timestamps();
 
-            $table->foreign('item_id')->references('stock_items')->on('id')->onDelete('cascade');
+            $table->foreign('item_id')->references('id')->on('stock_items')->onDelete('cascade');
         });
     }
 

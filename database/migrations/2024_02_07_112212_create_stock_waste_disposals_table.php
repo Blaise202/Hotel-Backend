@@ -12,15 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('stock_waste_disposals', function (Blueprint $table) {
-            $table->char('id')->primary();
-            $table->char('item_id');
+            $table->uuid('id')->primary();
+            $table->uuid('item_id');
             $table->dateTime('disposal_date');
             $table->string('disposal_method')->nullable();
             $table->integer('quantity');
             $table->longText('reason');
             $table->timestamps();
 
-            $table->foreign('item_id')->references('stock_items')->on('id')->onDelete('cascade');
+            $table->foreign('item_id')->references('id')->on('stock_items')->onDelete('cascade');
         });
     }
 

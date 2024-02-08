@@ -1,66 +1,77 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Ignore this README.md these were done !!!
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## and might need the `get-started` file
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+> # Tasks
+>
+> ## Overview
+>
+> -   ### 1 tasks completed
+> -   ### 1 tasks pending
+> -   ### 1 issue pending
+>
+> ## Tasks status
+>
+> -   [x] ~~show error message on login and register pages~~
+> -   [x] ~~create all user types~~
+> -   [x] ~~confirmation dialog on record deletion~~
+> -   [x] ~~verify if only admin can delete users~~
+> -   [x] ~~change every page title to match current page role (100+ pages)~~
+> -   [x] ~~change record updates submit button caption from ' submit' to 'update'~~
+> -   [x] ~~replace reset button by back button on user record editing forms~~
+> -   [x] ~~remove password from the message given on success of user creation~~
+> -   [x] ~~send the credentials of the created account to the new account's email~~
+> -   [x] ~~rename 'federations and association' to 'players on login as club~~
+> -   [ ] intergrate NID api and use it to autofill field on creation of a new player or staff member
+> -   [x] ~~'massive upload' page creation~~
+> -   [x] ~~'massive upload' page functionality~~
+> -   [x] ~~avoid entry of player under age of 3yrs~~
+> -   [x] ~~remove bracket from dashboard on login as club~~
+> -   [x] ~~check if players of one club aren't seen by the other.~~
+>
+> > ### NOTE
+> >
+> > -   intergrating NID API i'll need further assistance i stand with no access to the orginal code used
+> > -   'massive upload' upload will be done by today
+> > -   there are other issues i identified but weren't on the task list
+> >     -   those are also being fixed like a couple of missing pages and broken actions.
+>
+> # !!! NEW !!!
+>
+> ## Overview
+>
+> -   ### 18 tasks completed
+> -   ### 4 tasks pending
+>
+> ## Newly Fixed Bugs And Corrections Tasks
+>
+> -   [x] ~~error on 'loan request' service through the admin~~
+> -   [x] ~~error on 'add club' service through the admin~~
+> -   [x] ~~error on 'edit club' service through the admin~~
+> -   [x] ~~error on 'approve request(COB)' -> 'all loan requests'~~
+> -   [x] ~~warning on 'approve request(COB)' -> 'all workplan activity requests' on visit menu not highlighted~~
+> -   [x] ~~error on 'approve request(DOS)' -> 'all loan requests'~~
+> -   [x] ~~confirm player deletion~~
+> -   [x] ~~confirm 'federations and association' deletion~~
+> -   [x] ~~no menus on 'federation and association' logged as 'staff'~~
+> -   [x] ~~confirm club deletion~~
+> -   [x] ~~error on 'approve requests(DOS)' -> 'all loan request' logged as DOS~~
+> -   [x] ~~admin user unable to edit some users of some types like(normal, COB, DOS, federation, staff, club, admin)~~
+> -   [x] ~~remove 'federation and association' service for 'normal' user~~
+> -   [x] ~~prevent admin from adding a player~~
+> -   [x] ~~check travel clearance players are my own i.e. if i'm club1 i shouldn't see club2 players in my travel clearance players~~
+> -   [x] ~~trying to edit a player -> 'federationsAndAssociation.player.edit' wasn't found~~
+> -   [-] functionality of 'federationsAndAssociation.player.edit'
+> -   [x] ~~show employees that belong to you when logged in as a federation~~
+> -   [x] ~~COB and DOS only see employes of mini sports not those of other clubs and federationsrelation'~~
+> -   [-] error requesting travel clearance as club
+>     -   participant_travel_clearance table is linked to 'users relation' via 'user_id' while all the participants are in 'players relation'
+> -   [-] 'massive upload' page functionality
+> -   [-] intergrate NID api and use it to autofill field on creation of a new player or staff member
+>
+> > ### NOTE
+> >
+> > -   a common understanding on the differance between 'club in users realtion' and 'club in clubs is needed
+>
+> Excel Spreedsheets password: Minisports-sheet-pass7267
+> From Spreedsheet 'mass_players_excel_template'
