@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('stock_item_dimensions', function (Blueprint $table) {
-            $table->char('id')->primary();
+            $table->char('id')->primary()->default(\Illuminate\Support\Facades\DB::raw('uuid_generate_v4()'));
             $table->char('item_id');
             $table->string('furniture')->nullable();
             $table->string('length')->nullable();

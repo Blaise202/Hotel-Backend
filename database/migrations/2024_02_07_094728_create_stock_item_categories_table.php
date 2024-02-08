@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('stock_item_categories', function (Blueprint $table) {
-            $table->char('id')->primary();
+            $table->uuid('id')->primary();
             $table->string('name')->unique();
             $table->longText('description')->nullable();
             $table->string('status')->default('active');
