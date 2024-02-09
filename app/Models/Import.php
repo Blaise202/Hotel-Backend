@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class StockItemDimension extends Model
+class Import extends Model
 {
     use HasFactory, HasUuids;
 
-    protected $fillable = ['furniture', 'weight', 'length', 'width', 'height', 'volume'];
+    protected $fillable = ['quantity' , 'import_date'];
 
-    public function stockItem(){
-        return $this->belongsToMany(StockItem::class);
+    public function StockItem(){
+        return $this->belongsTo(StockItem::class);
     }
 }

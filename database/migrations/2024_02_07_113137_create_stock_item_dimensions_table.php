@@ -13,15 +13,16 @@ return new class extends Migration
     {
         Schema::create('stock_item_dimensions', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->uuid('item_id');
+            $table->uuid('stock_item_id');
             $table->string('furniture')->nullable();
             $table->string('length')->nullable();
             $table->string('width')->nullable();
+            $table->string('weight')->nullable();
             $table->string('height')->nullable();
             $table->string('volume')->nullable();
             $table->timestamps();
 
-            $table->foreign('item_id')->references('id')->on('stock_items')->onDelete('cascade');
+            $table->foreign('stock_item_id')->references('id')->on('stock_items')->onDelete('cascade');
         });
     }
 

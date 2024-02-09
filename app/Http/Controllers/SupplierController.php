@@ -23,7 +23,6 @@ class SupplierController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string',
-            'contact' => 'nullable|string',
             'phone' => 'required|unique:stock_suppliers,phone',
             'email' => 'required|email|unique:stock_suppliers,email',
             'address' => 'nullable|string',
@@ -31,7 +30,7 @@ class SupplierController extends Controller
             'state' => 'nullable|string',
             'zipcode' => 'nullable|string',
             'country' => 'nullable|string',
-            'image' => 'required|file|mimes:jpg,png,jpeg,avif|max:2048',
+            'image' => 'required|file|mimes:jpg,png,jpeg,avif|max:2048|unique:stock_suppliers,email,image',
         ]);
 
         if ($validator->fails()) {
@@ -40,7 +39,6 @@ class SupplierController extends Controller
 
         $supplier = new StockSupplier();
         $supplier->name = $request->name;
-        $supplier->contact = $request->contact;
         $supplier->phone = $request->phone;
         $supplier->email = $request->email;
         

@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class StockItemDimension extends Model
+class Requisition extends Model
 {
     use HasFactory, HasUuids;
+    
+    protected $fillable = ['quantity','expected_deadline'];
 
-    protected $fillable = ['furniture', 'weight', 'length', 'width', 'height', 'volume'];
-
-    public function stockItem(){
-        return $this->belongsToMany(StockItem::class);
+    public function StockItem(){
+        return $this->belongsTo(StockItem::class);
     }
 }

@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('stock_suppliers', function (Blueprint $table) {
+        Schema::create('imports', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('name');
-            $table->string('image')->unique();
-            $table->string('phone')->unique();
-            $table->string('email')->unique();
-            $table->string('status')->default('active');
+            $table->uuid('stock_item_id');
+            $table->integer('quantity');
+            $table->date('import_date');
             $table->timestamps();
+
+            $table->foreign('stock_item_id')->references('id')->on('stock_items');
         });
     }
 
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('stock_suppliers');
+        Schema::dropIfExists('imports');
     }
 };

@@ -20,10 +20,10 @@ return new class extends Migration
             $table->string('storage_location')->default('normal_stock');
             $table->uuid('category_id');
             $table->uuid('supplier_id');
-            $table->double('weight')->nullable();
-            $table->json('item_images')->nullable();
+            $table->string('status')->default('active');
+            $table->string('item_images')->nullable();
             $table->string('manufacturer')->nullable();
-            $table->dateTimeTz('expiry_date')->default(Carbon::now());
+            $table->dateTimeTz('expiry_date');
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('stock_item_categories')->onDelete('cascade');

@@ -11,13 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('stock_item_quantities', function (Blueprint $table) {
+        Schema::create('requisitions', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->uuid('stock_item_id');
             $table->integer('quantity');
+            $table->string('status')->default('pending');
+            $table->longText('reason')->nullable();
+            $table->date('expected_deadline')->nullable();
             $table->timestamps();
 
-            $table->foreign('stock_item_id')->references('id')->on('stock_items')->ondelete('cascade');
+            $table->foreign('stock_item_id')->references('id')->on('stock_items');
         });
     }
 
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('stock_item_quantities');
+        Schema::dropIfExists('requisitions');
     }
 };
