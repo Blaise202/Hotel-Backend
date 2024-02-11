@@ -56,7 +56,7 @@ class StockItemController extends Controller
             'expiry_date'=>'required|date',
             'quantity' => 'required|numeric',
             'weight' => 'sometimes|string',
-            'furniture' => 'sometimes|string',
+            'furniture' => 'sometimes',
             'length' => 'sometimes|string',
             'width' => 'sometimes|string',
             'height' => 'sometimes|string',

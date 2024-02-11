@@ -30,7 +30,7 @@ class SupplierController extends Controller
             'state' => 'nullable|string',
             'zipcode' => 'nullable|string',
             'country' => 'nullable|string',
-            'image' => 'required|file|mimes:jpg,png,jpeg,avif|max:2048|unique:stock_suppliers,email,image',
+            'image' => 'required|file|mimes:jpg,png,jpeg,avif|max:2048|unique:stock_suppliers,image',
         ]);
 
         if ($validator->fails()) {

@@ -12,11 +12,11 @@
 
 > ### All tasks = 13
 
-> ### Completed Tasks = 3
+> ### Completed Tasks = 7
 >
 > ### Pending Tasks = 1
 >
-> ### Awaiting Tasks = 9
+> ### Awaiting Tasks = 6
 
 > ## Overview
 
@@ -29,9 +29,9 @@
 
 > -   ### Requisitions Management
 
-> -   [ ] Receive requisitions digitally from different departments or user
-> -   [ ] Allow storekeepers to review and approve/reject requisitions
-> -   [ ] Provide automated notifications for pending requisitions awaiting approval
+> -   [x] **~~Receive requisitions digitally from different departments or user**~~
+> -   [x] **~~Allow storekeepers to review and approve/reject requisitions**~~
+> -   [x] **~~Provide automated notifications for pending requisitions awaiting approval**~~
 
 > -   ### Delivery Management
 

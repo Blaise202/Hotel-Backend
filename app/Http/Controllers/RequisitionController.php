@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Traits\NotificationTrait;
 use App\Models\Requisition;
 use App\Models\StockItem;
 use App\Models\StockItemQuantity;
@@ -12,8 +13,12 @@ use Illuminate\Support\Facades\Validator;
 
 class RequisitionController extends Controller
 {
+
+    use NotificationTrait;
+
     public function showRequisitions(){
         $requisitions = Requisition::where('status', 'pending')->get();
+        $notifications = [];
         $count = $requisitions->count();
         if($count == 0){
             return response()->json([
@@ -22,12 +27,20 @@ class RequisitionController extends Controller
                 'status' => 200
             ]);
         }
+        foreach($requisitions as $requisition){
+            $notification = $this->getNotification($requisition);
+            if($notification){
+                $notifications[] = $notification;
+            }
+        }
         return response()->json([
             'message' => 'success',
             'response' => $requisitions,
+            'notifications' => $notifications ?: 0,
             'status' => 200
         ]);
     }
+    
 
     public function makeRequisition(Request $request)
     {
