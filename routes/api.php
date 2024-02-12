@@ -4,6 +4,7 @@ use App\Http\Controllers\ItemCategoryController;
 use App\Http\Controllers\RequisitionController;
 use App\Http\Controllers\StockItemController;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\BarStockController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -40,7 +41,7 @@ Route::group(['prefix'=>'requisitions'], function() {
     Route::post('/make', [RequisitionController::class, 'makeRequisition'])->name('requisitions.create');
     Route::put('/approve/{id}', [RequisitionController::class, 'ApproveRequisition'])->name('requisitions.approve');
     Route::put('/decline/{id}', [RequisitionController::class, 'DeclineRequisition'])->name('requisitions.decline');
-    Route::get('/history', [RequisitionController::class, 'AllRequisitions'])->name('requisitions.history');
+    Route::get('/requisitions/history', [RequisitionController::class, 'AllRequisitions'])->name('requisitions.history');
 });
 
 Route::group(['prefix'=>'categories'], function() {
@@ -59,4 +60,12 @@ Route::group(['prefix' => 'suppliers'], function() {
     Route::put('/update/{id}', [SupplierController::class, 'update'])->name('suppliers.update');
     Route::delete('/delete/{id}', [SupplierController::class, 'deleteSupplier'])->name('supplier.delete');
     Route::get('/search/{search}', [SupplierController::class, 'searchSupplier'])->name('supplier.search');
+});
+
+Route::group(['prefix' => 'barStock'], function() {
+    Route::get('/', [BarStockController::class, 'index'])->name('bars');
+    Route::post('add', [BarStockController::class, 'create'])->name('barStock.addnew');
+    Route::put('close/{id}', [BarStockController::class, 'close'])->name('barStock.close');
+    Route::put('update/{id}', [BarStockController::class, 'update'])->name('barStock.update');
+    // Route::delete('delete/{id}', [BarStockController::class, 'destroy'])->name('barStock.delete');
 });

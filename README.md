@@ -12,11 +12,11 @@
 
 > ### All tasks = 13
 
-> ### Completed Tasks = 7
+> ### Completed Tasks = 9
 >
 > ### Pending Tasks = 1
 >
-> ### Awaiting Tasks = 6
+> ### Awaiting Tasks = 4
 
 > ## Overview
 
@@ -32,7 +32,6 @@
 > -   [x] **~~Receive requisitions digitally from different departments or user**~~
 > -   [x] **~~Allow storekeepers to review and approve/reject requisitions**~~
 > -   [x] **~~Provide automated notifications for pending requisitions awaiting approval**~~
-
 > -   ### Delivery Management
 
 > -   [ ] Manage deliveries of stock to various locations or departments
@@ -40,8 +39,8 @@
 
 > -   ### Alerts and Notifications
 
-> -   [ ] Set up alerts for low stock levels to notify storekeepers when stocks need replenishment
-> -   [ ] Send automated notifications to relevant stakeholders for pending requisitions awaiting approval
+> -   [x] **~~Set up alerts for low stock levels to notify storekeepers when stocks need replenishment**~~
+> -   [x] **~~Send automated notifications to relevant stakeholders for pending requisitions awaiting approval**~~
 
 > -   ### Reporting
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Traits\NotificationTrait;
 use App\Models\Import;
 use App\Models\StockItem;
 use App\Models\StockItemDimension;
@@ -14,6 +15,9 @@ use Illuminate\Support\Facades\Validator;
 
 class StockItemController extends Controller
 {
+
+    use NotificationTrait;
+
     public function showitems()
     {
         $items = StockItem::where('status','active')->get();
@@ -21,7 +25,12 @@ class StockItemController extends Controller
         if($count == 0){
             return response()->json('No Item items Found');
         }
-        return response()->json(['items Found'=>$items]);
+        return response()->json([
+            'message' => 'success',
+            'items Found'=>$items,
+            'alerts' => $this->stockLevelAlerts() ?: 0,
+            'status' => 200
+        ]);
     }
 
     public function ShowOneItem($id)

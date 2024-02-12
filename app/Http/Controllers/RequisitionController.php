@@ -28,7 +28,7 @@ class RequisitionController extends Controller
             ]);
         }
         foreach($requisitions as $requisition){
-            $notification = $this->getNotification($requisition);
+            $notification = $this->requisitionAlert($requisition);
             if($notification){
                 $notifications[] = $notification;
             }
